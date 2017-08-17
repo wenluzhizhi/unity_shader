@@ -9,3 +9,8 @@
 透明的线框(shader003)
 
 
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/dissolve.jpg)
+
+透明的线框(shader004)
+
+
