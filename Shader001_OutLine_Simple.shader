@@ -3,66 +3,81 @@
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
 Shader "Custom/myShader" {
-	Properties{
-	   _Range("Rim Range",Range(0,1))=0.1
-	   _RimColor("rim color",Color)=(1,1,1,1)
-	   _DiffuseColor("DiffuseColor",Color)=(1,1,1,1)
-	}
-	SubShader{
+	 Properties{
+        _Color("Main Color",Color)=(1,1,1,1)
+       _RimColor("RimColor",Color)=(1,1,1,1)
+       _RimLength("length",Range(0,1))=0.2
+       _Gloss("Gloss",Range(0,32))=2
+       _SpecularColor("Specular Color",Color)=(1,0,0,1)
+    }
+    SubShader{
 
-	     pass{
+        pass{
 
-	         CGPROGRAM
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "unitycg.cginc"
 
-	         #pragma vertex vert
-	         #pragma fragment frag
+            struct a2v{
 
-	         #include "unitycg.cginc"
+                float4 vertex:POSITION;
+                float4 normal:NORMAL;
+            };
 
-	         float _Range;
-	         fixed4 _RimColor;
-	         fixed4 _DiffuseColor;
-	         struct a2v{
-	           float4 vertex:POSITION;
-	           float4 normal:NORMAL;
-	         };
+            fixed4 _Color;
+            fixed4 _RimColor;
+            float _RimLength;
+            fixed3 _SpecularColor;
+            float _Gloss;
+            struct v2f{
 
+                 float4 pos:SV_POSITION;
+                 float3 worldNormal:TEXCOORD0;
+                 float3 worldViewDir:TEXCOORD1;
+                 float3 worldLightDir:TEXCOORD2;
+                 float3 worldRelectorDir:TEXCOORD3;
 
-	         struct v2f{
-
-                  float4 Pos:SV_POSITION;
-                  float3 normal:NORMAL;
-                  float3 worldViewDir:TEXCOORD0;
-                  float3 worldLightDir:TEXCOORD1;
-	         };
-
-	         v2f vert(a2v v)
-	         {
-	             v2f o;
-	            
-	             o.Pos=mul(UNITY_MATRIX_MVP,v.vertex);
-	             o.worldViewDir=normalize(_WorldSpaceCameraPos.xyz-v.vertex.xyz);
-	             o.normal=normalize(mul(v.normal,_World2Object).xyz);
-	             o.worldLightDir=normalize(_WorldSpaceLightPos0.xyz);
-	             return o;
-	           
-	         }
-
-	         fixed4 frag(v2f i):SV_Target{
-
-                 fixed4 col;
-                 col=fixed4(1,1,0,1);
-                 float dot_value=dot(i.normal,i.worldViewDir);
-                 col.rgb=_DiffuseColor.rgb*(dot(i.normal,i.worldLightDir)*0.5 +0.5);
-                 if(dot_value<_Range)
-                 {
-                    col=_RimColor;
-                 }
-                 return col;
-	         }
+            };
 
 
-	         ENDCG
-	     }
-	}
+            v2f vert(a2v v){
+                v2f o;
+                o.pos=mul(UNITY_MATRIX_MVP,v.vertex);
+                float3 worldPos=mul(_Object2World,v.vertex).xyz;
+                o.worldViewDir=normalize(_WorldSpaceCameraPos.xyz-worldPos);
+                o.worldNormal=normalize(mul(v.normal,_World2Object).xyz);
+                o.worldLightDir=normalize(_WorldSpaceLightPos0.xyz);  //平行光可以这样使用
+
+                o.worldRelectorDir=reflect(-o.worldLightDir,o.worldNormal);
+                return o;
+            }
+
+
+            fixed4 frag(v2f i):SV_Target{
+                fixed4 col;
+                float dot_value=dot(i.worldNormal,i.worldViewDir);
+
+                //漫反射
+                float diffuse_value=dot(i.worldLightDir,i.worldNormal);
+
+                //高光反射
+                float3 sp=_SpecularColor.rgb* pow( max(0,dot(i.worldViewDir,i.worldRelectorDir)),_Gloss);
+
+
+                //环境光：
+                fixed3 ambient=UNITY_LIGHTMODEL_AMBIENT.xyz;
+
+
+                if(dot_value<_RimLength)
+                {
+                   return _RimColor;
+                }
+                return _Color*(diffuse_value*0.5+0.5)+fixed4(sp+ambient,1);
+            }
+
+
+            ENDCG
+        }
+    }
 }
