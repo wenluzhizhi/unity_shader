@@ -13,4 +13,6 @@
 
 透明的线框(shader004)
 
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader005_1.gif)
 
+透明外罩(shader005)
