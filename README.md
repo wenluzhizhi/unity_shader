@@ -22,3 +22,8 @@
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/shader006_1.png)
 
 穿墙透视
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/shader007_water_1.png)
+
+动态水
