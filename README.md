@@ -16,3 +16,9 @@
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader005_1.gif)
 
 透明外罩(shader005)
+
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/shader006_1.png)
+
+穿墙透视
