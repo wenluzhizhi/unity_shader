@@ -27,3 +27,7 @@
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/shader007_water_1.png)
 
 动态水
+
+
+Shader19 雾效
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/fog_1.png)
