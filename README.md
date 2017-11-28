@@ -31,3 +31,14 @@
 
 Shader19 雾效
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/fog_1.png)
+
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader027.gif)
+
+Shader027 鼠标滑动水面
+
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader028.gifg)
+Shader028 翻页效果
