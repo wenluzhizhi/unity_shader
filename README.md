@@ -42,3 +42,7 @@ Shader027 鼠标滑动水面
 
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader028.gif)
 Shader028 翻页效果
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader031_relief_1_1.png)
+Shader031 翻页效果
