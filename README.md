@@ -1,4 +1,4 @@
-
+﻿
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/outline.jpg)
 
 简单的边缘高亮(shader001,shader002)
@@ -49,3 +49,6 @@ Shader031 简单的浮雕效果
 
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader032_Reminscence_1.png)
 Shader032 将图片转换为怀旧的效果
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader033_ConvexLens_1.png)
+Shader033 图片的凸透镜效果
