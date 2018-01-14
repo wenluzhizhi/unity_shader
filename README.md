@@ -52,3 +52,6 @@ Shader032 将图片转换为怀旧的效果
 
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader033_ConvexLens_1.png)
 Shader033 图片的凸透镜效果
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader40_RainDrop.png)
+Shader040 图片的凸透镜效果
