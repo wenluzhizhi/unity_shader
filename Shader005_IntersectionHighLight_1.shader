@@ -1,4 +1,9 @@
-﻿Shader "Custom/Shader005_IntersectionHighLight_1" {
+﻿//添加注释：
+ //1，通过主相机可以获取相机的深度图，然后在一个物体A上添加着色器，该着色器通过UV 进行深度采样，此时可以获取在该物体的顶点，
+  //，由其他物体带来的深度，即没有该物体时的深度
+ //然后再通过该物体上的顶点，获取该物体处实际的顶点深度
+ 
+ Shader "Custom/Shader005_IntersectionHighLight_1" {
 	Properties{
 
 	     _RimLength("RimLength",Range(0,3))=1
