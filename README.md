@@ -58,3 +58,11 @@ Shader033 图片的凸透镜效果
 
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/Shader034_Sword_Fluxray/sword.gif)
 Shader034 sword流光效果
+
+
+
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/Shader035_Fire_Flu/Shader035.gif)
+Shader035 燃烧的火苗
+
