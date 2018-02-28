@@ -52,3 +52,9 @@ Shader032 将图片转换为怀旧的效果
 
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader033_ConvexLens_1.png)
 Shader033 图片的凸透镜效果
+
+
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/Shader034_Sword_Fluxray/sword.gif)
+Shader034 sword流光效果
