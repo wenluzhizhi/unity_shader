@@ -86,3 +86,7 @@ Shader037 Displacement and tesslation shader
 
 Shader038 ImageGrid
 
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader039.png)
+
+Shader039 同一个圆环向多个不同物体投射
+
