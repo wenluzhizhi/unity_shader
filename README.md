@@ -82,7 +82,7 @@ Shader036 JellyShader
 
 Shader037 Displacement and tesslation shader
 
-![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader038.png)
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/shader038.png)
 
 Shader038 ImageGrid
 
