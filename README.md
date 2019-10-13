@@ -55,3 +55,7 @@ Shader033 图片的凸透镜效果
 
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader40_RainDrop.png)
 Shader040 图片的凸透镜效果
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/Shader041_DynamicWater_CommandBuffer/Shader041.png)
+Shader041 CommandBuffer 动态水
