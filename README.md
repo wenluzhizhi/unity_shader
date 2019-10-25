@@ -100,6 +100,6 @@ Shader040 图片的凸透镜效果
 Shader041 CommandBuffer 动态水
 
 
-![image](https://github.com/wenluzhizhi/unity_shader/blob/master/Shader041_DynamicWater_CommandBuffer/Shader042_RippleWater.png)
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader42_RippleWater.png)
 Shader042 CommandBuffer Ripple Water
 
