@@ -57,6 +57,7 @@ Shader032 将图片转换为怀旧的效果
 
 Shader033 图片的凸透镜效果
 
+<<<<<<< HEAD
 
 
 
@@ -89,4 +90,16 @@ Shader038 ImageGrid
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader039.png)
 
 Shader039 同一个圆环向多个不同物体投射
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader40_RainDrop.png)
+Shader040 图片的凸透镜效果
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/Shader041_DynamicWater_CommandBuffer/Shader041.png)
+Shader041 CommandBuffer 动态水
+
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/Shader041_DynamicWater_CommandBuffer/Shader042_RippleWater.png)
+Shader042 CommandBuffer Ripple Water
 
