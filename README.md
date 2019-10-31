@@ -103,3 +103,6 @@ Shader041 CommandBuffer 动态水
 ![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader42_RippleWater.png)
 Shader042 CommandBuffer Ripple Water
 
+
+![image](https://github.com/wenluzhizhi/unity_shader/blob/master/imgs/Shader043_EnergyShield.png)
+Shader043_EnergyShield
